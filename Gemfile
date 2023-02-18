@@ -38,6 +38,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails', '~> 6.0.0'
   gem "factory_bot_rails"
-  gem "simplecov"
+  gem 'simplecov', require: false
 end
