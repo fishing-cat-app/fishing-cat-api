@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -9,13 +11,21 @@ gem "rails", "~> 6.1.7", ">= 6.1.7.2"
 gem "pg", "~> 1.1"
 # Use Puma as the app server
 gem "puma", "~> 5.0"
+# Use Active Model has_secure_password
+gem "bcrypt", "~> 3.1.7"
+# Handles authentication
+gem "devise"
+# Devise extension for handling JWTs
+gem "devise-jwt"
+# Library for handling JSON:API serializaton
+gem "jsonapi-serializer"
+# Ruby code linter
+gem "rubocop", require: false
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-# Use Active Model has_secure_password
-# gem "bcrypt", "~> 3.1.7"
-
 # Use Active Storage variant
 # gem "image_processing", "~> 1.2"
 
@@ -28,6 +38,7 @@ gem "rack-cors"
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  # Call "binding.pry" anywhere in the code to stop execution and get a debugger console
   gem "pry"
 end
 
@@ -38,7 +49,7 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 6.0.0'
   gem "factory_bot_rails"
-  gem 'simplecov', require: false
+  gem "rspec-rails", "~> 6.0.0"
+  gem "simplecov", require: false
 end

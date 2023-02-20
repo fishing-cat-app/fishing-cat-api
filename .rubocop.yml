@@ -1,0 +1,38 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - "bin/**/*"
+    - "coverage/**/*"
+    - "db/**/*"
+
+Layout/SpaceInsideHashLiteralBraces:
+  Description: meow
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SupportedStyles:
+    - space
+    - no_space
+  Exclude:
+    - "spec/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashSyntax:
+  Description: Checks hash literal syntax
+  EnforcedStyle: hash_rockets
+  Exclude:
+    - "Gemfile"
+
+Style/RedundantConstantBase:
+  Enabled: false
+
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  Description: Checks for symbol arrays using the %i() syntax
+  EnforcedStyle: brackets
