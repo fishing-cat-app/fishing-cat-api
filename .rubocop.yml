@@ -6,6 +6,12 @@ AllCops:
     - "coverage/**/*"
     - "db/**/*"
 
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
 Layout/SpaceInsideHashLiteralBraces:
   Description: meow
   EnforcedStyle: space
