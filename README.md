@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Authentication
+
+Endpoints
+/api/signup -> ::Devise::RegistrationsController
+/api/login -> ::Devise::SessionsController
