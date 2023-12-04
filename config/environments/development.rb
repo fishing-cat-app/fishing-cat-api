@@ -38,7 +38,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # Default mailer config
-  config.action_mailer.default_url_options = { :host => "localhost", :port => 3000 }
+  config.action_mailer.default_url_options = { :host => "localhost", :port => 3001 }
 
   # Lists the formats that should be treated as navigational
   config.navigational_formats = []
