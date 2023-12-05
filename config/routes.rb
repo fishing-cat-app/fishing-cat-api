@@ -3,6 +3,7 @@
 ::Rails.application.routes.draw do
   namespace :api do
     resources :current_user, :only => :index
+    resources :cats, :only => :index
   end
 
   devise_for :users, :path => "", :path_names => {
