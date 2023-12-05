@@ -3,7 +3,7 @@ module Api
     before_action :authenticate_user!
 
     def index
-      render :json { :cat => "Meow" }
+      render :json => { :cat => "Meow" }
     end
   end
 end
